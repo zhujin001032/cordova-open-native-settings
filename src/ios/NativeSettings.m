@@ -1,19 +1,13 @@
-//
-//  NativeSettings.m
-//  NativeSettings
-//
-//  Created by selahssea on 05.12.14.
-//
-//
-
 #import "NativeSettings.h"
+@import UIKit;
 
 @implementation NativeSettings
 
 - (void)open:(CDVInvokedUrlCommand*)command
 {
-        NSURL *appSettings = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        [[UIApplication sharedApplication] openURL:appSettings];
+        if (![[UIApplication sharedApplication] openURL:[NSURL String:@"prefs:root=Bluetooth"]]) {
+			// error
+		}
 }
 
 @end

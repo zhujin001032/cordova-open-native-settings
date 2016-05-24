@@ -1,17 +1,17 @@
-#NativeSettings plugin for Android and iOS 8 Cordova.
+#NativeSettings plugin for Cordova
 
-The plugin allows you to open Settings view from Android Cordova application and to open Native App settings view from iOS 8 Cordova application. Based on https://github.com/raulduran/VideoPlayer.
+The plugin allows you to open the platform settings view on iOS 9 and Android, via cordova based app.
 
-##Adding the Plugin to your project
+##Adding/Removing the Plugin
 
 ```bash
-cordova plugin add https://github.com/selahssea/Cordova-open-native-settings.git
+cordova plugin (add|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
 ```
 
-##Removing the Plugin to your project
+or via npm:
 
 ```bash
-cordova plugin rm com.phonegap.plugins.nativesettingsopener
+npm (install|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
 ```
 
 ##Using the plugin (opens Location Settings in Android and Application Settings in iOS)
