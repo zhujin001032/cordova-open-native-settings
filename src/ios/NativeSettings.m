@@ -5,7 +5,7 @@
 
 - (void)open:(CDVInvokedUrlCommand*)command
 {
-        if (![[UIApplication sharedApplication] openURL:[NSURL String:@"prefs:root=Bluetooth"]]) {
+        if (![[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Bluetooth"]]) {
 			// error
 		}
 }
