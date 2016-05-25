@@ -137,6 +137,9 @@
 	else if ([key isEqualToString:@"wallpaper"]) {
 		result = [self do_open:@"prefs:root=Wallpaper"];
 	} 
+	else if ([key isEqualToString:@"wifi"]) {
+		result = [self do_open:@"prefs:root=WIFI"];
+	} 
 	else {
 		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Invalid Action"];
 	}
