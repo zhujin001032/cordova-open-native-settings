@@ -1,12 +1,8 @@
 var NativeSettings = function() {
 };
 
-NativeSettings.open = function(onsucess, onfail) {
-	cordova.exec(onsucess, onfail, "NativeSettings", "open", []);
-};
-
-NativeSettings.openSetting = function(settingName, onsucess, onfail) {
-	cordova.exec(onsucess, onfail, "NativeSettings", settingName, []);
+NativeSettings.open = function(setting_name, onsucess, onfail) {
+	cordova.exec(onsucess, onfail, "NativeSettings", setting_name, []);
 };
 
 module.exports = NativeSettings;
