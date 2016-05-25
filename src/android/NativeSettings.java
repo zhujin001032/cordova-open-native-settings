@@ -9,6 +9,7 @@
 package com.phonegap.plugins.nativesettings;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 
 import android.content.Intent;
 import android.content.Context;
@@ -23,7 +24,7 @@ import org.apache.cordova.PluginResult;
 public class NativeSettings extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         PluginResult.Status status = PluginResult.Status.OK;
         Uri packageUri = Uri.parse("package:" + this.cordova.getActivity().getPackageName());
         String result = "";
@@ -31,11 +32,7 @@ public class NativeSettings extends CordovaPlugin {
         //Information on settings can be found here:
         //http://developer.android.com/reference/android/provider/Settings.html
 		
-		try {
-			action = args.getString(0);
-		} catch (JSONException e) {
-			status = PluginResult.Status.INVALID_ACTION;
-		}  
+		action = args.getString(0);
 
         if (action.equals("accessibility")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS));
