@@ -23,7 +23,7 @@ cordova.plugins.settings.open(setting_constant, success_callback, failure_callba
 ###Example for iOS and Android - open Wifi settings
 
 ```js
-if (window.cordova && window.cordova.plugins.settings.openSetting) {
+if (window.cordova && window.cordova.plugins.settings) {
     console.log('openNativeSettingsTest is active');
     window.cordova.plugins.settings.open("wifi", function() {
             console.log('opened settings');
