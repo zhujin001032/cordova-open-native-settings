@@ -30,6 +30,8 @@ public class NativeSettings extends CordovaPlugin {
 
         //Information on settings can be found here:
         //http://developer.android.com/reference/android/provider/Settings.html
+		
+		action = args.getString(0);
 
         if (action.equals("accessibility")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS));
