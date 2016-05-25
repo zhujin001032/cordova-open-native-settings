@@ -5,9 +5,14 @@
 
 - (void)open:(CDVInvokedUrlCommand*)command
 {
-        if (![[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Bluetooth"]]) {
-			// error
-		}
+	CDVPluginResult* pluginResult = nil;
+	if (![[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Bluetooth"]]) {
+		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+	} else {
+		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:"Opened"];
+	}
+	
+	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end
