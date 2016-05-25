@@ -34,7 +34,7 @@ public class NativeSettings extends CordovaPlugin {
 		try {
 			action = args.getString(0);
 		} catch (JSONException e) {
-        //some exception handler code.
+			status = PluginResult.Status.INVALID_ACTION;
 		}  
 
         if (action.equals("accessibility")) {
