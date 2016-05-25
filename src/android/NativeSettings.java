@@ -26,6 +26,7 @@ public class NativeSettings extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         PluginResult.Status status = PluginResult.Status.OK;
+		pluginResult.setKeepCallback(true);
         Uri packageUri = Uri.parse("package:" + this.cordova.getActivity().getPackageName());
         String result = "";
 
@@ -133,9 +134,7 @@ public class NativeSettings extends CordovaPlugin {
         }
         
         callbackContext.sendPluginResult(new PluginResult(status, result));
-
         return true;
-
     }
 }
 
