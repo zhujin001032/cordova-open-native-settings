@@ -2,13 +2,14 @@
 
 The plugin allows you to open OS settings on iOS 9 and Android, via cordova-based app. For example, it will allow you to open the keyboard settings, Wifi, bluetooth etc (full list below).
 
-##Adding/Removing the Plugin (Will save it to the config.xml file)
+##Adding/Removing the Plugin 
+* It will be saved to the config.xml file
 
 ```bash
 cordova plugin (add|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
 ```
 
-or via npm (will save it to the package.json file):
+or via npm (It will be saved to the package.json file):
 
 ```bash
 npm (install|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
