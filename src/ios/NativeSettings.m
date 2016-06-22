@@ -17,7 +17,10 @@
 	NSString* key = [command.arguments objectAtIndex:0];
 	BOOL result = NO;
 	
-	if ([key isEqualToString:@"settings"]) {
+    if ([key isEqualToString:@"application_details"]) {
+        result = [self do_open:UIApplicationOpenSettingsURLString];
+    }
+	else if ([key isEqualToString:@"settings"]) {
 		result = [self do_open:@"prefs:"];
 	}
 	else if ([key isEqualToString:@"about"]) {
