@@ -48,7 +48,7 @@ You can use any constant from the following list:
     "account", // ios, android
     "airplane_mode", // ios, android
     "apn", // android
-    "application_details", // android
+    "application_details", // ios, android
     "application_development", // android
     "application", // android
     "autolock", // ios
