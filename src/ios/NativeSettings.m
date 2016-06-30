@@ -1,5 +1,4 @@
 #import "NativeSettings.h"
-@import UIKit;
 
 @implementation NativeSettings
 
