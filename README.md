@@ -97,7 +97,7 @@ You can use any constant from the following list:
     "sound", // ios, android
     "software_update", // ios
     "storage", // ios, android
-    "store", // ios
+    "store", // ios, android
     "sync", // android
     "tethering", // ios
     "twitter", // ios

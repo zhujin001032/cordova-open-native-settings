@@ -114,6 +114,9 @@ public class NativeSettings extends CordovaPlugin {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_SHOW_REGULATORY_INFO));
         } else if (action.equals("sound")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_SOUND_SETTINGS));
+        } else if (action.equals("store")) {
+            this.cordova.getActivity().startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=" + this.cordova.getActivity().getPackageName())));
         } else if (action.equals("sync")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_SYNC_SETTINGS));
         } else if (action.equals("usage")) {
