@@ -41,7 +41,7 @@
 		result = [self do_open:@"prefs:root=Brightness"];
 	}
 	else if ([key isEqualToString:@"bluetooth"]) {
-		result = [self do_open:@"prefs:root=General&path=Bluetooth"];
+		result = [self do_open:@"prefs:root=Bluetooth"];
 	}
 	else if ([key isEqualToString:@"castle"]) {
 		result = [self do_open:@"prefs:root=CASTLE"];
