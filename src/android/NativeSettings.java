@@ -138,7 +138,9 @@ public class NativeSettings extends CordovaPlugin {
         	return false;
         }
         
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if(args.getBoolean(1)) {
+        	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
         this.cordova.getActivity().startActivity(intent);
         
         callbackContext.sendPluginResult(new PluginResult(status, result));
