@@ -128,7 +128,9 @@ public class NativeSettings extends CordovaPlugin {
         } else if (action.equals("wifi_ip")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_WIFI_IP_SETTINGS));
         } else if (action.equals("wifi")) {
-            this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS));
+        	Intent intent = new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            this.cordova.getActivity().startActivity(intent);
         } else if (action.equals("wireless")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
         } else {
