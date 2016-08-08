@@ -38,6 +38,9 @@ if (window.cordova && window.cordova.plugins.settings) {
 }
 ```
 
+In Android, by default it is opened in the same application as a new activity, the hardware back button will bring the user back to the previous activity (the app). In order to open settings as a new application (two applications will appear in "recent/opened" apps list) the following code can be used:
+`window.cordova.plugins.settings.open(["wifi", true], function() {}, function() {}); ....`
+
 ##Settings Options
 You can use any constant from the following list:
 * I tried to map Android and iOS together, however, they are not always the same.
