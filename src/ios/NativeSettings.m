@@ -55,7 +55,7 @@
 		result = [self do_open:[prefix stringByAppendingString:@"root=General&path=USAGE/CELLULAR_USAGE"]];
 	}
 	else if ([key isEqualToString:@"configuration_list"]) {
-		result = [self do_open:[prefix stringByAppendingString:@"root=General&path=ManagedConfigurationList"];
+		result = [self do_open:[prefix stringByAppendingString:@"root=General&path=ManagedConfigurationList"]];
 	}
 	else if ([key isEqualToString:@"date"]) {
 		result = [self do_open:[prefix stringByAppendingString:@"root=General&path=DATE_AND_TIME"]];
