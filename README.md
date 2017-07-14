@@ -5,14 +5,22 @@ The plugin allows you to open OS settings on iOS 8/9/10 and Android, via cordova
 ## Adding/Removing the Plugin
 It will be saved to the config.xml file
 
+Ionic Framework:
+
 ```bash
-cordova plugin (add|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
+ionic cordova plugin (add|rm) cordova-open-native-settings --save
+```
+
+Cordova:
+
+```bash
+cordova plugin (add|rm) cordova-open-native-settings --save
 ```
 
 or via npm (It will be saved to the package.json file)
 
 ```bash
-npm (install|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
+npm (install|rm) cordova-open-native-settings --save
 ```
 
 ## Using the plugin (opens Location Settings in Android and Application Settings in iOS)
