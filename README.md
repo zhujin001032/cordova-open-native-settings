@@ -1,8 +1,8 @@
-#NativeSettings plugin for Cordova (6/7)
+# NativeSettings plugin for Cordova (6/7)
 
 The plugin allows you to open OS settings on iOS 8/9/10 and Android, via cordova-based app. For example, it will allow you to open the keyboard settings, Wifi, bluetooth etc (full list below).
 
-##Adding/Removing the Plugin 
+## Adding/Removing the Plugin
 It will be saved to the config.xml file
 
 ```bash
@@ -15,13 +15,13 @@ or via npm (It will be saved to the package.json file)
 npm (install|rm) https://github.com/guyromb/Cordova-open-native-settings.git --save
 ```
 
-##Using the plugin (opens Location Settings in Android and Application Settings in iOS)
+## Using the plugin (opens Location Settings in Android and Application Settings in iOS)
 
 ```
 cordova.plugins.settings.open(setting_constant, success_callback, failure_callback);
 ```
 
-###Example for iOS and Android - open Wifi settings
+### Example for iOS and Android - open Wifi settings
 
 ```js
 if (window.cordova && window.cordova.plugins.settings) {
@@ -41,7 +41,7 @@ if (window.cordova && window.cordova.plugins.settings) {
 In Android, by default it is opened in the same application as a new activity, the hardware back button will bring the user back to the previous activity (the app). In order to open settings as a new application (two applications will appear in "recent/opened" apps list) the following code can be used:
 `window.cordova.plugins.settings.open(["wifi", true], function() {}, function() {}); ....`
 
-##Settings Options
+## Settings Options
 You can use any constant from the following list:
 * I tried to map Android and iOS together, however, they are not always the same.
 
@@ -115,13 +115,13 @@ You can use any constant from the following list:
     "wireless" // android
 ```
 
-##Notes
+## Notes
 * Android plugin based on the following information: https://developer.android.com/reference/android/provider/Settings.html#ACTION_DREAM_SETTINGS
 * iOS plugin based on the following information: https://gist.github.com/phynet/471089a51b8f940f0fb4
 * In iOS, this plugin generates a URL scheme for the *-Info.plist configurations file.
 * The plugin for Android is based on the forked repository and was refactored. The iOS part was built from skretch.
 
-##License
+## License
 ```
 The MIT License
 
