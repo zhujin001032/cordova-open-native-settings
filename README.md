@@ -63,6 +63,7 @@ You can use any constant from the following list:
     "application_development", // android
     "application", // android
     "autolock", // ios
+    "battery_optimization", // android
     "bluetooth", // ios, android
     "castle", // ios
     "captioning", // android

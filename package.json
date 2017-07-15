@@ -1,6 +1,6 @@
 {
-  "name": "cordova-open-native-settings",
-  "version": "1.3.0",
+  "name": "net.gsrweb.cordova.plugins.cordovaopennativesettings",
+  "version": "1.4.1",
   "description": "Native settings opener for Cordova",
   "cordova": {
     "id": "net.gsrweb.cordova.plugins.cordovaopennativesettings",
@@ -22,7 +22,7 @@
   "engines": [
     {
       "name": "cordova",
-      "version": ">=3.0.0"
+      "version": ">=4.0.0"
     }
   ],
   "author": "Guy Rombaut <admin@gsrweb.net>",
@@ -41,6 +41,9 @@
     },
     {
       "username": "perlish"
+    },
+    {
+      "username": "emcniece"
     }
   ],
   "license": "MIT",
