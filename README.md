@@ -8,19 +8,19 @@ It will be saved to the config.xml file
 Ionic Framework:
 
 ```bash
-ionic cordova plugin (add|rm) net.gsrweb.cordova.plugins.cordovaopennativesettings
+ionic cordova plugin (add|rm) cordova-open-native-settings
 ```
 
 Cordova:
 
 ```bash
-cordova plugin (add|rm) net.gsrweb.cordova.plugins.cordovaopennativesettings --save
+cordova plugin (add|rm) cordova-open-native-settings --save
 ```
 
 or via npm (It will be saved to the package.json file)
 
 ```bash
-npm (install|rm) net.gsrweb.cordova.plugins.cordovaopennativesettings --save
+npm (install|rm) cordova-open-native-settings --save
 ```
 
 ## Using the plugin (opens Location Settings in Android and Application Settings in iOS)
