@@ -80,6 +80,7 @@ You can use any constant from the following list:
     "keyboard_subtype", // android
     "locale", // ios, android
     "location", // ios, android
+    "locations", // ios
     "manage_all_applications", // android
     "manage_applications", // android
     "memory_card", // android
