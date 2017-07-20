@@ -150,6 +150,9 @@
 	else if ([key isEqualToString:@"wifi"]) {
 		result = [self do_open:[prefix stringByAppendingString:@"root=WIFI"]];
 	} 
+	else if ([key isEqualToString:@"touch"]) {
+	    result = [self do_open:[prefix stringByAppendingString:@"root=TOUCHID_PASSCODE"]];
+	}	
 	else {
 		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Invalid Action"];
 	}
