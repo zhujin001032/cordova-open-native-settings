@@ -114,6 +114,7 @@ You can use any constant from the following list:
     "sync", // android
     "tethering", // ios
     "twitter", // ios
+    "touch", // ios
     "usage", // ios, android
     "user_dictionary", // android
     "video", // ios
