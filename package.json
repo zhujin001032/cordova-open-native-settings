@@ -19,30 +19,38 @@
     "cordova-android",
     "cordova-ios"
   ],
-  "engines": [
+  "engines": {
     {
       "name": "cordova",
       "version": ">=4.0.0"
     }
-  ],
+  },
   "author": "Guy Rombaut <admin@gsrweb.net>",
   "contributors": [
     {
+      "name": "Guy Rombaut",
+      "email": "admin@gsrweb.net",
+      "url": "gsrweb.net",
       "username": "guyromb"
     },
     {
+      "name": "unknown",
       "username": "deefactorial"
     },
     {
+      "name": "unknown",
       "username": "selahssea"
     },
     {
+      "name": "unknown",
       "username": "asmund1"
     },
     {
+      "name": "unknown",
       "username": "perlish"
     },
     {
+      "name": "unknown",
       "username": "emcniece"
     }
   ],
