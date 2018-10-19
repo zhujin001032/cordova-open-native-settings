@@ -21,9 +21,6 @@
         prefix = @"app-settings:";
     }
 
-	if(SYSTEM_VERSION_LESS_THAN(@"10.0")){
-		prefix = @"prefs:";
-	}
 	
     if ([key isEqualToString:@"application_details"]) {
         result = [self do_open:UIApplicationOpenSettingsURLString];
