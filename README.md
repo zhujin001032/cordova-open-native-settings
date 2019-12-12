@@ -20,7 +20,7 @@ cordova plugin (add|rm) cordova-open-native-settings --save
 or via npm (It will be saved to the package.json file)
 
 ```bash
-npm (install|rm) cordova-open-native-settings --save
+npm (install|uninstall) cordova-open-native-settings --save
 ```
 
 ## Using the plugin (opens Location Settings in Android and Application Settings in iOS)
