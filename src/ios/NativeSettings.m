@@ -1,17 +1,30 @@
 #import "NativeSettings.h"
+@interface NativeSettings ()
+@property (nonatomic ,strong) CDVInvokedUrlCommand* command;
+@end
 
 @implementation NativeSettings
 
 - (BOOL)do_open:(NSString *)pref {
-	if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:pref]]) {
-		return YES;
-	} else {
-		return NO;
-	}
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:pref] options:@{} completionHandler:^(BOOL success) {
+            CDVPluginResult* pluginResult = nil;
+            if (success) {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Opened"];
+            } else {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Cannot open"];
+            }
+            
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:self->_command.callbackId];
+            
+        }];
+    
+ return YES;
 }
 
 - (void)open:(CDVInvokedUrlCommand*)command
 {
+    _command = command;
 	CDVPluginResult* pluginResult = nil;
 	NSString* key = [command.arguments objectAtIndex:0];
 	NSString* prefix = @"App-Prefs:";
@@ -188,13 +201,13 @@
 		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Invalid Action"];
 	}
 		
-	if (result) {
-		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Opened"];
-	} else {
-		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Cannot open"];
-	}
-	
-	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+//	if (result) {
+//		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Opened"];
+//	} else {
+//		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Cannot open"];
+//	}
+//
+//	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end
